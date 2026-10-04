@@ -1,24 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Products } from "@/components/Products";
+import { WhyUs, Story, HowToOrder, BulkStrip, FAQ, Footer, FloatingWhatsApp } from "@/components/Sections";
+import { SITE } from "@/data/site";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Shake N Bite | Premium Makhana, Jaggery, Sattu & Chana";
+const DESC =
+  "Handpicked makhana from Mithila, pure jaggery, sattu and roasted chana. Healthy Indian snacks packed fresh — enquire and order on WhatsApp.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE.brand,
+  description: DESC,
+  email: SITE.email,
+  telephone: SITE.whatsappDisplay,
+  address: SITE.address,
+  sameAs: [SITE.instagramUrl, SITE.facebookUrl],
+};
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(jsonLd) }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Products />
+        <WhyUs />
+        <Story />
+        <HowToOrder />
+        <BulkStrip />
+        <FAQ />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+    </>
   );
 }
