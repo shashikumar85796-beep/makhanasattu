@@ -89,7 +89,7 @@ export function Story() {
         <motion.div {...fadeUp} className="relative">
           <div className="absolute inset-6 rounded-[2.5rem] bg-forest/15 blur-2xl" aria-hidden />
           <img
-            src={PRODUCTS[0].image}
+            src={PRODUCTS[0]!.image}
             alt="Shake N Bite Makhana pouch, sourced from Mithila"
             loading="lazy"
             width={1024}

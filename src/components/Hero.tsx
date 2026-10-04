@@ -50,7 +50,7 @@ export function Hero() {
         </motion.div>
 
         <motion.img
-          src={PRODUCTS[0].image}
+          src={PRODUCTS[0]!.image}
           alt="Shake N Bite Makhana pack — Roasted & Lightly Salted, 250g"
           width={1024}
           height={1024}

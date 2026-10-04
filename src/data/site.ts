@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     subtitle: "Roasted & Lightly Salted",
     description:
       "Handpicked fox nuts from Mithila, slow-roasted for the perfect crunch.",
-    image: makhanaPack.url,
+    image: (makhanaPack as { url: string }).url,
     weights: ["250g", "500g", "1kg"],
   },
   {
