@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Leaf, Dumbbell, WheatOff, Gem, BadgeCheck, Award, MessageCircle, ChevronDown,
-  Instagram, Facebook, Mail, MapPin, Phone, ShoppingBasket, Truck,
+  Mail, MapPin, Phone, ShoppingBasket, Truck,
 } from "lucide-react";
 import { SITE, FAQS, PRODUCTS, waLink, MESSAGES } from "@/data/site";
 import { SectionTitle } from "./SectionTitle";
@@ -199,8 +199,12 @@ export function Footer() {
           </div>
           <p className="mt-3 font-heading italic text-cream/75">{SITE.tagline}</p>
           <div className="mt-5 flex gap-3">
-            <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-full bg-cream/10 p-2.5 hover:bg-gold hover:text-gold-foreground"><Instagram className="h-5 w-5" /></a>
-            <a href={SITE.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-cream/10 p-2.5 hover:bg-gold hover:text-gold-foreground"><Facebook className="h-5 w-5" /></a>
+            <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-full bg-cream/10 p-2.5 hover:bg-gold hover:text-gold-foreground">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href={SITE.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-cream/10 p-2.5 hover:bg-gold hover:text-gold-foreground">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V3h-2.6C11.7 3 11 4.8 11 6.5v2H9V12h2v9h3v-9h2.3l.4-3.5H14z"/></svg>
+            </a>
           </div>
         </div>
         <div>
