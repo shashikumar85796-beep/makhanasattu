@@ -17,7 +17,7 @@ function makePieces(count: number): Piece[] {
     const near = i % 3 !== 0; // 2/3 near, 1/3 far
     return {
       id: i,
-      left: 8 + ((i * 37) % 84),
+      left: 36 + ((i * 37) % 26), // column above the bowl
       size: near ? 26 + ((i * 13) % 22) : 14 + ((i * 7) % 10),
       duration: near ? 3.2 + ((i * 0.7) % 1.6) : 5 + ((i * 0.9) % 2),
       delay: (i * 0.55) % 4,
@@ -71,7 +71,7 @@ export function MakhanaRain() {
           key={p.id}
           className="absolute"
           style={{ left: `${p.left}%`, top: -60 }}
-          animate={{ y: ["0vh", "88vh"], rotate: [0, p.rotate] }}
+          animate={{ y: ["0vh", "84vh"], rotate: [0, p.rotate], opacity: [0, 1, 1, 0] }}
           transition={{
             duration: p.duration,
             delay: p.delay,
