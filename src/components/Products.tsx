@@ -116,7 +116,7 @@ export function Products() {
 
   const items = PRODUCTS.filter((p) => selected.includes(p.id)).map((p) => ({
     name: p.name,
-    weight: weights[p.id],
+    weight: weights[p.id]!,
   }));
 
   return (
@@ -128,7 +128,7 @@ export function Products() {
             <ProductCard
               key={p.id}
               product={p}
-              weight={weights[p.id]}
+              weight={weights[p.id]!}
               onWeight={(w) => setWeights((s) => ({ ...s, [p.id]: w }))}
               selected={selected.includes(p.id)}
               onToggle={() => toggle(p.id)}
