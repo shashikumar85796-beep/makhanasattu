@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { MakhanaRain, MakhanaPiece } from "./MakhanaRain";
-import { PRODUCTS, waLink, MESSAGES } from "@/data/site";
+import { waLink, MESSAGES } from "@/data/site";
+import makhanaPackCut from "@/assets/makhana-pack-cut.png";
 
 const PILE: [number, number, number][] = [
   [-70, 8, 34], [-38, 2, 38], [-4, 0, 40], [32, 3, 36], [64, 9, 32],
@@ -50,7 +51,7 @@ export function Hero() {
         </motion.div>
 
         <motion.img
-          src={PRODUCTS[0]!.image}
+          src={makhanaPackCut}
           alt="Shake N Bite Makhana pack — Roasted & Lightly Salted, 250g"
           width={1024}
           height={1024}
