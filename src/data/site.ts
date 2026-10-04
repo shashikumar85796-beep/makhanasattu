@@ -12,7 +12,7 @@ import chanaPack from "@/assets/chana-pack.png";
 export const SITE = {
   brand: "Shake N Bite",
   tagline: "Sattu La Naya Awtaar, Kato Gholo Peelo Yaar",
-  whatsappNumber: "91943212067 0".replace(/\s/g, ""), // +91 94321 20670
+  whatsappNumber: "919432120670", // +91 94321 20670
   whatsappDisplay: "+91 94321 20670",
   email: "hello@shakenbite.in",
   address: "Darbhanga, Mithila, Bihar, India",
