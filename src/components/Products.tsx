@@ -107,7 +107,7 @@ function ProductCard({
 
 export function Products() {
   const [weights, setWeights] = useState<Selection>(
-    Object.fromEntries(PRODUCTS.map((p) => [p.id, p.weights[0]])),
+    Object.fromEntries(PRODUCTS.map((p) => [p.id, p.weights[0]!])) as Selection,
   );
   const [selected, setSelected] = useState<string[]>([]);
 

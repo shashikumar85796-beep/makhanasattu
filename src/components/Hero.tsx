@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { MakhanaRain, MakhanaPiece } from "./MakhanaRain";
 import { PRODUCTS, waLink, MESSAGES } from "@/data/site";
 
-const PILE = [
+const PILE: [number, number, number][] = [
   [-70, 8, 34], [-38, 2, 38], [-4, 0, 40], [32, 3, 36], [64, 9, 32],
   [-52, -14, 34], [-18, -20, 38], [16, -18, 36], [48, -12, 32], [0, -34, 34],
 ];
